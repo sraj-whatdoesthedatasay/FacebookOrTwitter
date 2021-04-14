@@ -11,14 +11,21 @@ page = st.sidebar.selectbox(
 #st.sidebar.text_input("What's your name?")
 
 if page == 'About':
-    st.write('This is Lab about Streamlit!')
+    st.write('This site is about presenting **Data Science** magic through Streamlit!')
+    st.write('Check out different selection options in the sidebar on the left')
     st.write('Thanks for visiting')
-    st.write('Contact info: 804 123-4567')
 
 if page == 'FB or Twitter':
     st.write('')
     st.write('')
     st.write('')
+
+    st.write("Facebook & Twitter sub-reddits")
+    zcol1, mid, col2 = st.beta_columns([1,1,20])
+    with col1:
+        st.image('FBTwitterjpg', width=60)
+    with col2:
+        st.write('FB & Twitter')
 
     st.markdown('Facebook and Twitter: Social Media Giants.  Which Social Media are you posting about?')
 
