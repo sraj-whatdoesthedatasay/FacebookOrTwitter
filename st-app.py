@@ -24,7 +24,7 @@ if page == 'FB or Twitter':
 
     fbot = pipe.predict([user_text])[0]
     st.write(f'Your post comes from ** {fbot} **')
-    st.write('FB and Twitter recent sub-reddits have been used to train an NLP model which then uses your post components to predict the sub-reddit class')
+    st.write('Approach: FB and Twitter recent sub-reddits have been used to train an NLP model which then uses your post components to predict the sub-reddit class')
 
 if page == 'Contact Me':
     name = st.text_input('What is your name?')
