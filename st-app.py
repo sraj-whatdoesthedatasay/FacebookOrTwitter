@@ -21,14 +21,14 @@ if page == 'FB or Twitter':
     st.write('')
 
     st.write("Facebook & Twitter sub-reddits")
-    st.image('FBTwitter.jpg', width=60)
-    
+    st.image('FBTwitter.jpg', width=200)
+
     st.markdown('Facebook and Twitter: Social Media Giants.  Which Social Media are you posting about?')
 
     with open('model.p', mode='rb') as pickle_in:
         pipe = pickle.load(pickle_in)
 
-        user_text = st.text_input('Please input your post:', value = "Love Facebook Groups")
+        user_text = st.text_input('Please write a sample post and we will guess if it matches FB or Twitter subreddit:', value = "Love Facebook Groups")
 
     fbot = pipe.predict([user_text])[0]
     st.write(f'Your post comes from {fbot}')
