@@ -23,7 +23,7 @@ if page == 'FB or Twitter':
     st.write("Facebook & Twitter sub-reddits")
     zcol1, mid, col2 = st.beta_columns([1,1,20])
     with col1:
-        st.image('FBTwitterjpg', width=60)
+        st.image('FBTwitter.jpg', width=60)
     with col2:
         st.write('FB & Twitter')
 
