@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 
-st.title('Is this post from Facebook or Twitter?')
+st.title('Welcome to Data Science drive web-apps!')
 
 page = st.sidebar.selectbox(
 'Select a page:',
@@ -17,10 +17,8 @@ if page == 'About':
 
 if page == 'FB or Twitter':
 
-    st.write("Facebook & Twitter sub-reddits")
-    st.image('FBTwitter.jpg', width=800)
-
-    st.markdown('Facebook and Twitter: Social Media Giants.  Which Social Media are you posting about?')
+    st.write("Did this post come from Facebook OR Twitter sub-reddits?")
+    st.image('FBTwitter.jpg', width=700)
 
     with open('model.p', mode='rb') as pickle_in:
         pipe = pickle.load(pickle_in)
