@@ -21,12 +21,8 @@ if page == 'FB or Twitter':
     st.write('')
 
     st.write("Facebook & Twitter sub-reddits")
-    zcol1, mid, col2 = st.beta_columns([1,1,20])
-    with col1:
-        st.image('FBTwitter.jpg', width=60)
-    with col2:
-        st.write('FB & Twitter')
-
+    st.image('FBTwitter.jpg', width=60)
+    
     st.markdown('Facebook and Twitter: Social Media Giants.  Which Social Media are you posting about?')
 
     with open('model.p', mode='rb') as pickle_in:
