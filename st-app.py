@@ -1,11 +1,11 @@
 import streamlit as st
 import pickle
 
-st.title('Data Science driven web-page!')
+st.title('Does this post match FB or Twitter sub-reddit?')
 
 page = st.sidebar.selectbox(
 'Select a page:',
-('About', 'FB or Twitter')
+('FB or Twitter', 'About')
 )
 
 #st.sidebar.text_input("What's your name?")
@@ -13,11 +13,9 @@ page = st.sidebar.selectbox(
 if page == 'About':
     st.write('This site is about presenting **Data Science** magic through Streamlit!')
     st.write('Check out different selection options in the sidebar on the left')
-    st.write('Thanks for visiting')
+    st.write('Thanks for visiting!')
 
 if page == 'FB or Twitter':
-
-    st.write("Did this post come from Facebook OR Twitter sub-reddits?")
     st.image('FBTwitter.jpg', width=600)
 
     with open('model.p', mode='rb') as pickle_in:
