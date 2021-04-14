@@ -18,15 +18,14 @@ if page == 'About':
 if page == 'FB or Twitter':
 
     st.write("Did this post come from Facebook OR Twitter sub-reddits?")
-    st.image('FBTwitter.jpg', width=700)
+    st.image('FBTwitter.jpg', width=600)
 
     with open('model.p', mode='rb') as pickle_in:
         pipe = pickle.load(pickle_in)
-
-        user_text = st.text_input('Please write a sample post and we will guess if it matches FB or Twitter subreddit:', value = "Love Facebook Groups")
+        user_text = st.text_input('Please write a sample post and we will guess if it matches FB or Twitter's subreddit:', value = "Love Facebook Groups")
 
     fbot = pipe.predict([user_text])[0]
-    st.write(f'Your post comes from {fbot}')
+    st.write(f'Your post comes from {**fbot**}')
     st.write('FB and Twitter recent sub-reddits have been used to train an NLP model which then matches your post with the trained model')
 
 if page == 'Contact Me':
