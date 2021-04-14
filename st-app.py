@@ -23,7 +23,7 @@ if page == 'FB or Twitter':
         user_text = st.text_input('Please write a sample post in the box below and we will predict below if it matches FB or Twitter subreddit:', value = "Love Facebook Groups")
 
     fbot = pipe.predict([user_text])[0]
-    st.write(f'Your post comes from {fbot}')
+    st.write(f'Your post comes from ** {fbot} **')
     st.write('FB and Twitter recent sub-reddits have been used to train an NLP model which then uses your post components to predict the sub-reddit class')
 
 if page == 'Contact Me':
