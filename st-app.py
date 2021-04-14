@@ -16,12 +16,9 @@ if page == 'About':
     st.write('Thanks for visiting')
 
 if page == 'FB or Twitter':
-    st.write('')
-    st.write('')
-    st.write('')
 
     st.write("Facebook & Twitter sub-reddits")
-    st.image('FBTwitter.jpg', width=200)
+    st.image('FBTwitter.jpg', width=800)
 
     st.markdown('Facebook and Twitter: Social Media Giants.  Which Social Media are you posting about?')
 
