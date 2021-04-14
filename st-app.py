@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 
-st.title('Does this post match FB or Twitter sub-reddit?')
+st.title('Your text from FB or Twitter sub-reddit?')
 
 page = st.sidebar.selectbox(
 'Select a page:',
