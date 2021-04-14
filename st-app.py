@@ -16,11 +16,11 @@ if page == 'About':
     st.write('Thanks for visiting!')
 
 if page == 'FB or Twitter':
-    st.image('FBTwitter.jpg', width=600)
+    st.image('FBTwitter.jpg', width=500)
 
     with open('model.p', mode='rb') as pickle_in:
         pipe = pickle.load(pickle_in)
-        user_text = st.text_input('Please write a sample post and we will predict below if it matches FB or Twitter subreddit:', value = "Love Facebook Groups")
+        user_text = st.text_input('Please write a sample post in the box below and we will predict below if it matches FB or Twitter subreddit:', value = "Love Facebook Groups")
 
     fbot = pipe.predict([user_text])[0]
     st.write(f'Your post comes from {fbot}')
